@@ -1,0 +1,34 @@
+Network:
+
+Request URL
+http://127.0.0.1:3000/index.html?vscode-livepreview=true
+Request Method
+GET
+Status Code
+200 OK
+Remote Address
+127.0.0.1:3000
+Referrer Policy
+strict-origin-when-cross-origin
+
+///////////////////////////
+
+Request URL
+http://localhost:3000/promociones.html
+Request method
+GET
+Status code
+404 Not Found
+Remote address
+127.0.0.1:3000
+Referrer policy
+strict-origin-when-cross-origin
+
+¿Qué código responde y qué significa?
+Código devuelto: 404 (o 404 Not Found).
+
+Significado: El cliente (tu navegador) logró comunicarse con el servidor, pero el servidor no encontró ningún recurso o archivo en el directorio solicitado (/promociones.html).
+
+////////////////////////////
+
+En el sitio web Rueda Libre, HTML se encarga de la estructura básica del contenido organizando títulos, párrafos, imágenes y botones de los productos. CSS gestiona la capa visual, aplicando estilos, colores corporativos, tipografías y asegurando que la tienda se vea bien en celulares y computadores. Finalmente, JavaScript aporta la interactividad necesaria para que el usuario pueda interactuar con el sitio, como filtrar bicicletas por tipo o agregar productos al carrito de compras en tiempo real.

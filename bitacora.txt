@@ -31,4 +31,21 @@ Significado: El cliente (tu navegador) logró comunicarse con el servidor, pero 
 
 ////////////////////////////
 
+Tabla de rutas del sitio y ubicación real de los archivos
+
+Las rutas de esta tabla son relativas a la raíz del proyecto y corresponden a archivos existentes:
+
+| Ruta | Ubicación real del archivo |
+|---|---|
+| `/index.html` | `index.html` |
+| `/paginas/tarifas.html` | `paginas/tarifas.html` |
+| `/paginas/reservas.html` | `paginas/reservas.html` |
+| `/img/portada-rueda.jpg` | `img/portada-rueda.jpg` |
+| `/img/bicicleta-rueda.png` | `img/bicicleta-rueda.png` |
+| `/img/ruta-rueda.png` | `img/ruta-rueda.png` |
+| `/img/logo-rueda-libre.jpg` | `img/logo-rueda-libre.jpg` |
+
+
+////////////////////////////
+
 En el sitio web Rueda Libre, HTML se encarga de la estructura básica del contenido organizando títulos, párrafos, imágenes y botones de los productos. CSS gestiona la capa visual, aplicando estilos, colores corporativos, tipografías y asegurando que la tienda se vea bien en celulares y computadores. Finalmente, JavaScript aporta la interactividad necesaria para que el usuario pueda interactuar con el sitio, como filtrar bicicletas por tipo o agregar productos al carrito de compras en tiempo real.

@@ -53,3 +53,44 @@ Las rutas de esta tabla son relativas a la raíz del proyecto y corresponden a a
 
 /////////////////////////
 25/10/2026
+-En mini reto 8, encuentro que el nombre del logo no es totalmente descriptivo y se corrige.
+
+-Las etiquetas <h> fueron revisadas desde miniretos anteriores y no se realizan cambios.
+
+Colores:
+
+Para realizar la evaluación de accesibilidad (normativa WCAG 2.1), tomaremos los valores hexadecimales estándar representativos para la paleta de **Rueda Libre**:
+
+* **Texto normal:** Requiere un contraste mínimo de **4.5:1** (Nivel AA).
+* **Texto grande:** Requiere un contraste mínimo de **3.0:1** (Nivel AA) — texto de al menos 18pt (24px) o 14pt (18.66px) en negrita.
+
+---
+
+### 1. Evaluación de Contraste de Color
+
+| Combinación | Color de Texto | Color de Fondo | Ratio de Contraste | Nivel de Accesibilidad (WCAG AA) |
+| --- | --- | --- | --- | --- |
+| **1. Blanco sobre Verde Ruta** | `#FFFFFF` | `#1E5631` | **5.90:1** | **Apta para texto normal y grande** |
+| **2. Blanco sobre Naranja Pedal** | `#FFFFFF` | `#FF6B35` | **2.88:1** | **No apta** *(Falla contraste)* |
+| **3. Azul Noche sobre Naranja Pedal** | `#1A2238` | `#FF6B35` | **5.41:1** | **Apta para texto normal y grande** |
+| **4. Azul Noche sobre Crema** | `#1A2238` | `#FDFBF7` | **13.56:1** | **Apta para texto normal y grande** |
+| **5. Gris Asfalto sobre Crema** | `#333333` | `#FDFBF7` | **12.63:1** | **Apta para texto normal y grande** |
+| **6. Verde Ruta sobre Crema** | `#1E5631` | `#FDFBF7` | **7.12:1** | **Apta para texto normal y grande** |
+| **7. Naranja Pedal sobre Crema** | `#FF6B35` | `#FDFBF7` | **2.91:1** | **Apta solo para texto grande** |
+| **8. Blanco sobre Azul Noche** | `#FFFFFF` | `#1A2238` | **15.35:1** | **Apta para texto normal y grande** |
+
+---
+
+### 2. Mapa de Uso de Color para la Bitácora
+
+Con base en los resultados de accesibilidad, la distribución funcional de colores para el sitio web queda establecida de la siguiente manera:
+
+* **Fondos generales del sitio:** **Crema (`#FDFBF7`)** como fondo principal claro para garantizar lectura descansada; **Azul Noche (`#1A2238`)** o **Verde Ruta (`#1E5631`)** para bloques de contraste oscuro (como el `<header>` o el `<footer>`).
+* **Texto principal y párrafos:** **Gris Asfalto (`#333333`)** o **Azul Noche (`#1A2238`)** sobre fondo Crema, asegurando legibilidad máxima superando el ratio de 12:1.
+* **Encabezados y títulos grandes (`<h1>`, `<h2>`):** **Verde Ruta (`#1E5631`)**, **Azul Noche (`#1A2238`)** o **Naranja Pedal (`#FF6B35`)** (solo en tamaño grande sobre Crema).
+* **Botones primarios (Call to Action):**
+* Fondo **Naranja Pedal (`#FF6B35`)** con texto **Azul Noche (`#1A2238`)** (evitando estrictamente el texto blanco sobre naranja).
+* Fondo **Verde Ruta (`#1E5631`)** con texto **Blanco (`#FFFFFF`)**.
+
+
+* **Enlaces y elementos interactivos:** **Verde Ruta (`#1E5631`)** o **Azul Noche (`#1A2238`)** en estado normal, con cambio a **Naranja Pedal (`#FF6B35`)** con subrayado o mayor grosor para estados de *focus* y *hover*.

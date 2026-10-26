@@ -35,6 +35,107 @@
         </ul>
     </section>
 
+    <section id="formulario">
+        <h2>Formulario para reservar</h2>
+        <form action="" method="post">
+
+           <fieldset>
+            <legend>Tus datos</legend>
+            <p>
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            </p>
+            
+            <p>
+            <label for="identificacion">Número de identificación:</label>
+            <input type="number" placeholder="Solo números" id="identificacion" name="identificacion" required>
+            </p>
+
+            <p>
+            <label for="email">Email:</label>
+            <input type="email" placeholder="example@example.com" id="email" name="email" required>
+            </p>
+
+            <p>
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" pattern="[0-9]{10}" placeholder="3xx xxx xxxx" id="telefono" name="telefono" required>
+            </p>
+
+           </fieldset>
+
+           <fieldset>
+            <legend>Tu alquiler</legend>
+
+            <p>
+            <label for="fecha">Fecha de reserva:</label>
+            <input type="date" id="fecha" name="fecha" required>
+            </p>
+
+            <p>
+            <label for="bicicleta">Tipo de bicicleta:</label>
+            <select id="bicicleta" name="bicicleta" required>
+                <option value="">Selecciona un tipo</option>
+                <option value="urbana">Urbana</option>
+                <option value="montaña">Montaña</option>
+                <option value="eléctrica">Eléctrica</option>
+            </select>
+            </p>
+
+            <p>
+            <label for="plan">Plan:</label>
+            <select id="plan" name="plan" required>
+                <option value="">Selecciona un plan</option>
+                <option value="1hora">1 hora</option>
+                <option value="mediodia">Medio día (4 horas)</option>
+                <option value="diacompleto">Día completo</option>
+            </select>
+            </p>
+
+            <p> 
+            <label for="cantidad">Cantidad de bicicletas:</label>
+            <select id="cantidad" name="cantidad" required>
+                <option value="">Selecciona la cantidad</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="Más de 3">Más de 3, déjanos un comentario</option>
+            </select>
+            </p>
+
+            <p>
+            <label for="recorrido">Recorrido guiado:</label>
+            <select id="recorrido" name="recorrido" required>
+                <option value="">Selecciona un recorrido</option>
+                <option value="rioyparques">Río y parques</option>
+                <option value="saboresdebarrio">Sabores de barrio</option>
+                <option value="recorridocompletodelaciudad">Recorrido completo de la ciudad</option>
+                <option value="ninguno">Ninguno</option>
+            </select>
+            </p>
+
+            <p>
+            <label for="comentarios">Comentarios:</label>
+            <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea>
+            </p>
+
+           </fieldset>
+
+           <fieldset>
+            <legend>Confirmación</legend>
+
+            <p>
+            <label for="terminos">Acepto los términos y condiciones:</label>
+            <input type="checkbox" id="terminos" name="terminos" required>
+            </p>
+
+            <p>
+            <button type="submit">Reservar</button>
+            </p>
+           </fieldset>
+
+        </form>
+    </section>
+
  </main>
 
  <footer>

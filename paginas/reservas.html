@@ -43,12 +43,12 @@
             <legend>Tus datos</legend>
             <p>
             <label for="nombre">Nombre completo:</label>
-            <input type="text" id="nombre" name="nombre" required>
+            <input type="text" minlength="3" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez" >
             </p>
             
             <p>
             <label for="identificacion">Número de identificación:</label>
-            <input type="number" placeholder="Solo números" id="identificacion" name="identificacion" required>
+            <input type="text" placeholder="Solo números" id="identificacion" name="identificacion" required inputmode="numeric" pattern="[0-9]{6,10}" maxlength="10" title="Solo números, entre 6 y 10 dígitos">
             </p>
 
             <p>
@@ -58,7 +58,7 @@
 
             <p>
             <label for="telefono">Teléfono:</label>
-            <input type="tel" pattern="[0-9]{10}" placeholder="3xx xxx xxxx" id="telefono" name="telefono" required>
+            <input type="tel" pattern="[0-9]{10}" min="3000000000" max="3999999999" placeholder="3xx xxx xxxx" id="telefono" name="telefono" required title="Debes escribir un número de teléfono válido, ejemplo: 300 123 4567">
             </p>
 
            </fieldset>
@@ -68,7 +68,7 @@
 
             <p>
             <label for="fecha">Fecha de reserva:</label>
-            <input type="date" id="fecha" name="fecha" required>
+            <input type="date" id="fecha" name="fecha" required min="2026-11-01" max="2026-12-31">
             </p>
 
             <p>
@@ -98,7 +98,9 @@
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
-                <option value="Más de 3">Más de 3, déjanos un comentario</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
             </select>
             </p>
 
@@ -115,7 +117,8 @@
 
             <p>
             <label for="comentarios">Comentarios:</label>
-            <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea>
+            <textarea id="comentarios" name="comentarios" rows="4" cols="50" maxlength="300" title="Máximo 300 caracteres" placeholder="Escribe aquí cualquier observación o solicitud especial..."></textarea>
+            <small>Máximo 300 caracteres</small>
             </p>
 
            </fieldset>

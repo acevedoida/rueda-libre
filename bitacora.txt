@@ -119,3 +119,14 @@ font-family: var(--fuente-textos);
     --espaciado-md: 1rem;
     --espaciado-lg: 2rem;
     --espaciado-xl: 3rem;
+
+/////////////////////////////
+28/10/1999
+
+Revision de CSS con <element class="activo">
+
+Selector Specificity: (0, 1, 0)
+
+El problema se debe a la especificidad de CSS.
+
+El selector #menu a utiliza un selector de ID (#menu), lo que le otorga mayor prioridad que al selector de clase .activo. Por esta razón, el color definido en #menu a prevalece y sobrescribe al de .activo.

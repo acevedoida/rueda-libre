@@ -23,3 +23,43 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--fuente-titulos);
 }
+
+/*menu principal arriba*/
+#menu a.activo { 
+  color: var(--verde-ruta); 
+  font-weight: 600;
+}
+
+/*menu principal arriba hover y focus-visible*/
+#menu a:hover,
+#menu a:focus-visible {
+    color: var(--naranja-pedal);
+}
+
+/*botones de reservar*/
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--verde-ruta);
+    color: var(--crema);
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.boton:hover{
+    background-color: var(--naranja-pedal);
+    outline: 2px solid rgb(0, 0, 0);
+}
+
+.boton:focus{   
+    outline: 2px solid black;
+    border-radius: 5px;
+    color: black;
+}
+
+#formulario input:focus,select:focus,textarea:focus, button:focus {
+    outline: 2px solid var(--azul-noche);
+    border-radius: 5px;
+    box-shadow: 0 0 5px;
+}

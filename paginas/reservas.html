@@ -21,8 +21,6 @@
             <li><a href="reservas.html" class="activo">Reservas</a></li>
         </ul>
     </nav>
-    
-    
  </header>
 
  <main>
@@ -43,8 +41,9 @@
         <h2>Formulario para reservar</h2>
         <form action="" method="post">
 
-           <fieldset>
+           <fieldset class="form-data">
             <legend>Tus datos</legend>
+
             <p>
             <label for="nombre">Nombre completo:</label>
             <input type="text" minlength="3" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez" >
@@ -67,7 +66,7 @@
 
            </fieldset>
 
-           <fieldset>
+           <fieldset class="form-rent">
             <legend>Tu alquiler</legend>
 
             <p>
@@ -125,7 +124,7 @@
             <small>Máximo 300 caracteres</small>
             </p>
 
-           </fieldset>
+           </fieldset class="form-confirm">
 
            <fieldset>
             <legend>Confirmación</legend>

@@ -63,3 +63,149 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 5px;
     box-shadow: 0 0 5px;
 }
+
+#formulario {
+    box-sizing: border-box;
+    width: 70%;
+    
+}
+
+main {
+    max-width: 60rem;
+    margin-inline: auto;
+}
+
+.cover {
+    min-height: 70vh;
+   
+}
+
+#services {
+    display: grid;
+    gap: var(--espaciado-lg);
+}
+
+#services article {
+    padding: var(--espaciado-md);
+    border: 1px solid var(--gris-asfalto);
+    border-radius: var(--espaciado-sm);
+}
+
+#services article img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#recorridos section th, #recorridos section td, #tarifas section th, #tarifas section td {
+    padding: var(--espaciado-sm);
+}
+
+#recorridos table tbody thead {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--espaciado-lg);
+
+}
+
+/* 1. Configuración de la tabla principal */
+table {
+    border-collapse: separate; /* OBLIGATORIO para poder redondear */
+    border-spacing: 0;        /* Elimina el espacio entre celdas */
+    border: 3px solid var(--gris-asfalto); /* Borde exterior */
+    border-radius: 12px;       /* El redondeo exterior que buscas */
+    overflow: hidden;          /* Evita que el fondo de los th tape las esquinas */
+    width: 100%;
+}
+
+/* 2. Líneas divisorias internas (Abajo y Derecha) */
+th, td {
+    padding: var(--espaciado-sm);
+    border-bottom: 1px solid var(--gris-asfalto);
+    border-right: 1px solid var(--gris-asfalto);
+}
+
+/* 3. Eliminar el borde derecho en la última columna */
+th:last-child, td:last-child {
+    border-right: none;
+}
+
+/* 4. Eliminar el borde inferior en la última fila */
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* 5. Estilos de texto y colores */
+th {
+    text-align: center;
+    background-color: var(--verde-ruta);
+    color: var(--crema);
+}
+
+td {
+    text-align: left;
+}
+
+/*Se inicia modificaciones al formulario*/
+
+label {
+    display: block;
+    margin-bottom: var(--espaciado-sm);
+}
+
+input, select, textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-data, .form-rent, .form-confirm {
+  margin-bottom: var(--espaciado-xl);
+}
+
+button[type="submit"] {
+  padding: 0.75rem 2rem;
+  background-color: var(--verde-ruta);
+  color: var(--crema);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--naranja-pedal);
+}
+
+button:focus-visible {
+  outline: 3px solid var(--naranja-pedal);
+  outline-offset: 2px;
+}
+
+/*se modifica el nav del menu*/
+
+nav ul {
+    display: flex;
+    gap: var(--espaciado-xl);
+    padding: 0;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/* se modifica el recuadro de confirmacion */
+input[type="checkbox"] {
+    width: auto;
+}
+
+fieldset p:has(#terminos) {
+    display: flex;
+    flex-direction: row-reverse; /* Coloca el checkbox después del texto */
+    justify-content: flex-end;   /* Los junta hacia la izquierda */
+    align-items: center;         /* Los centra verticalmente */
+    gap: var(--espaciado-sm);    /* Espacio entre el texto y el cuadro */
+}
+
+/* 3. Quita el margen inferior por defecto del label para que no se desfase */
+fieldset p:has(#terminos) label {
+    margin-bottom: 0;
+    cursor: pointer;
+}

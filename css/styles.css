@@ -1,3 +1,6 @@
+/* ==================================================
+   1. VARIABLES
+================================================== */
 :root {
     --verde-ruta:#1E7A4F;
     --naranja-pedal:#F39A2B;
@@ -13,6 +16,10 @@
     --espaciado-lg: 2rem;
     --espaciado-xl: 3rem;
 }
+
+/* ==================================================
+   2. ESTILOS GENERALES
+================================================== */
 
 body {
     font-family: var(--fuente-textos);
@@ -36,6 +43,10 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--naranja-pedal);
 }
 
+/* ==================================================
+   5. BOTONES
+================================================== */
+
 /*botones de reservar*/
 .boton {
     display: inline-block;
@@ -58,6 +69,10 @@ h1, h2, h3, h4, h5, h6 {
     color: black;
 }
 
+/* ==================================================
+   8. FORMULARIO
+================================================== */
+
 #formulario input:focus,select:focus,textarea:focus, button:focus {
     outline: 2px solid var(--azul-noche);
     border-radius: 5px;
@@ -75,10 +90,18 @@ main {
     margin-inline: auto;
 }
 
+/* ==================================================
+   4. HERO / PORTADA
+================================================== */
+
 .cover {
     min-height: 70vh;
    
 }
+
+/* ==================================================
+   6. SERVICIOS
+================================================== */
 
 #services {
     display: grid;
@@ -97,16 +120,16 @@ main {
     height: auto;
 }
 
-#recorridos section th, #recorridos section td, #tarifas section th, #tarifas section td {
-    padding: var(--espaciado-sm);
-}
-
 #recorridos table tbody thead {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: var(--espaciado-lg);
 
 }
+
+/* ==================================================
+   7. TABLAS
+================================================== */
 
 /* 1. Configuración de la tabla principal */
 table {
@@ -180,6 +203,9 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
+/* ==================================================
+   3. NAVEGACIÓN
+================================================== */
 /*se modifica el nav del menu*/
 
 nav ul {
@@ -208,4 +234,46 @@ fieldset p:has(#terminos) {
 fieldset p:has(#terminos) label {
     margin-bottom: 0;
     cursor: pointer;
+}
+
+/*se agrega nuevo a la bicicleta electrica*/
+.tarjeta-servicio {
+    position: relative;
+}
+
+.etiqueta-nuevo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #e63946;
+    color: white;
+    padding: 0.3rem 0.7rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* ==================================================
+   9. WHATSAPP FLOTANTE
+================================================== */
+
+/*boton whatsapp*/
+.whatsapp-fijo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-family: sans-serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.whatsapp-fijo:hover {
+    background-color: #1ea952;
 }

@@ -14,14 +14,14 @@
 
 <body>
 
-<header>
-    <a href="index.html"><img src="img/logo-rueda-libre.jpg" alt="Logo de Rueda Libre" width="200" height="100"></a>
+<header class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-md-between gap-3 p-3">
+    <a href="index.html"><img class="img-fluid" src="img/logo-rueda-libre.jpg" alt="Logo de Rueda Libre" width="200" height="100"></a>
     
     <nav aria-label="Navegación principal">
-        <ul id="menu">
-            <li><a href="index.html" class="activo">Inicio</a></li>
-            <li><a href="paginas/tarifas.html" class="activo">Tarifas</a></li>
-            <li><a href="paginas/reservas.html" class="activo">Reservas</a></li>
+        <ul id="menu" class="list-unstyled d-flex flex-wrap justify-content-center gap-3 mb-0">
+            <li><a href="index.html" class="activo" aria-current="page">Inicio</a></li>
+            <li><a href="paginas/tarifas.html">Tarifas</a></li>
+            <li><a href="paginas/reservas.html">Reservas</a></li>
         </ul>
     </nav>
 
@@ -197,47 +197,44 @@
         </div>
     </section>
 
-    <section id="services">
-
-        
-        <h2>Nuestros servicios</h2>
-        <p>Ofrecemos una <strong>amplia variedad de bicicletas</strong> para satisfacer todas tus necesidades</strong> de transporte y recreación.</p>
-
-        <a href="paginas/tarifas.html#recorridos" class="boton">Consulta nuestras tarifas</a>
-        
-    
-        <article>
-        <h3>Alquiler de Bicicletas</h3>
-        <p>
-        Disfruta de la libertad de explorar Medellín por tu cuenta. 
-        <strong>Incluye casco y candado</strong> para tu seguridad.
-        </p>
-        <img src="img/bicicleta-rueda.png" alt="Alquiler de bicicletas" width="400" height="300">
-        </article>
-
-        <!--bicicleta electrica-->
-        <article class="tarjeta-servicio">
-        <span class="etiqueta-nuevo">Nuevo</span>
-
-        <h3>Bicicletas Eléctricas</h3>
-        <p>
-        Disfruta de una experiencia más cómoda y eficiente para recorrer Medellín.
-        </p>
-        <img src="img/bicicleta-electrica-rueda.jpg" alt="Bicicleta eléctrica" width="400" height="300">
-        </article>
-
-        <article>
-        <h3>Recorridos Guiados</h3>
-        <p>
-        Descubre los secretos de la ciudad con expertos locales.
-        <em>Salidas todos los fines de semana a las 7:00 a.m.</em>
-        </p>
-        <img src="img/ruta-rueda.png" alt="Recorridos guiados" width="400" height="300">
-        </article>
-    
+    <section id="services" class="my-5" aria-labelledby="services-title">
+        <h2 id="services-title" class="mb-3">Nuestros servicios</h2>
+        <p>Ofrecemos una <strong>amplia variedad de bicicletas</strong> para satisfacer todas tus necesidades de transporte y recreación.</p>
+        <p><a href="paginas/tarifas.html#recorridos" class="boton">Consulta nuestras tarifas</a></p>
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card h-100">
+                    <div class="card-body">
+                        <h3 class="h5 card-title">Alquiler de Bicicletas</h3>
+                        <p class="card-text">Disfruta de la libertad de explorar Medellín por tu cuenta. <strong>Incluye casco y candado</strong> para tu seguridad.</p>
+                    </div>
+                    <img class="img-fluid" src="img/bicicleta-rueda.png" alt="Alquiler de bicicletas" width="400" height="300">
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card tarjeta-servicio h-100">
+                    <span class="etiqueta-nuevo">Nuevo</span>
+                    <div class="card-body">
+                        <h3 class="h5 card-title">Bicicletas Eléctricas</h3>
+                        <p class="card-text">Disfruta de una experiencia más cómoda y eficiente para recorrer Medellín.</p>
+                    </div>
+                    <img class="img-fluid" src="img/bicicleta-electrica-rueda.jpg" alt="Bicicleta eléctrica" width="400" height="300">
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card h-100">
+                    <div class="card-body">
+                        <h3 class="h5 card-title">Recorridos Guiados</h3>
+                        <p class="card-text">Descubre los secretos de la ciudad con expertos locales. <em>Salidas todos los fines de semana a las 7:00 a.m.</em></p>
+                    </div>
+                    <img class="img-fluid" src="img/ruta-rueda.png" alt="Recorridos guiados" width="400" height="300">
+                </article>
+            </div>
+        </div>
     </section>
 
-    <section id="process">
+    <div class="row g-4 my-5">
+    <section id="process" class="col-12 col-md-7">
         <h2>Proceso de alquiler</h2>
         <p>Alquilar una bicicleta con nosotros es fácil y rápido. Simplemente selecciona la bicicleta que deseas, elige la duración del alquiler y disfruta de tu paseo por Medellín.</p>
         
@@ -260,7 +257,7 @@
     
     </section>
 
-    <section id="contact">
+    <section id="contact" class="col-12 col-md-5">
         <h2>Contáctanos</h2>
         <p>Si tienes alguna pregunta o deseas más información sobre nuestros servicios, no dudes en contactarnos. Estamos aquí para ayudarte a tener la mejor experiencia de ciclismo en Medellín.</p> 
         <p>Puedes encontrarnos aquí:</p>
@@ -269,24 +266,21 @@
 
     
     </section>
-
-
-
-
-
+    </div>
  </main>
-<footer>
-    <div class="bloque-footer">
+<footer class="container-fluid py-4">
+  <div class="row g-3">
+    <div class="bloque-footer col-12 col-md-6 col-xl-4">
         <h3>Rueda Libre</h3>
         <p>Alquiler de bicicletas en Medellín.</p>
     </div>
 
-    <div class="bloque-footer">
+    <div class="bloque-footer col-12 col-md-6 col-xl-4">
         <h3>Contacto</h3>
         <p><a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a></p>
     </div>
 
-    <div class="bloque-footer">
+    <div class="bloque-footer col-12 col-md-6 col-xl-4">
         <h3>Horario</h3>
         <p>Estamos disponibles para reservas los días:</p>
         <ul>
@@ -294,6 +288,7 @@
             <li>Sábados, domingos y festivos: 6:00 a 14:00</li>
         </ul>
     </div>
+  </div>
 </footer>
 
 <a

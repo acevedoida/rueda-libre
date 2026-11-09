@@ -201,3 +201,36 @@ Se revisaron los estilos calculados de Inicio en el navegador con Bootstrap y `s
 3. **Tamaño de títulos de tarjetas:** los `h3` generales escalan con el viewport en Bootstrap; los títulos de tarjeta usan la utilidad `.h5` y quedan en 20 px, con jerarquía menor que los encabezados de sección. Se conserva la fuente Montserrat mediante la regla de marca para encabezados.
 
 Verificación responsive con emulación de viewport a 360 px, 768 px y 1280 px: portada apilada en móvil y en dos columnas desde `md`; rutas en una, dos y tres columnas según el breakpoint; flota en una, dos y cuatro columnas; beneficios en una y dos columnas. No hubo desbordamiento horizontal ni imágenes rotas. Se conservaron Open Sans, Montserrat y los colores de marca.
+
+////////////////////////////
+09/11/2026 - Migración de tarifas y reservas; comparativa final Bootstrap
+
+**Medición de CSS**
+
+Se contó cada línea física de `css/styles.css` con `git show <revisión>:css/styles.css | Measure-Object -Line` para el historial y `Get-Content css/styles.css | Measure-Object -Line` para la versión final.
+
+| Referencia | Revisión | Líneas |
+|---|---|---:|
+| Versión previa al ensayo Bootstrap | `ff49e41` (`feat: design mobile view and test on devtools`, 08/11/2026) | 389 |
+| Versión actual tras completar la migración | working tree, 09/11/2026 | 184 |
+| Reducción |  | **205 líneas (52,7 %)** |
+
+El historial público consultado no contiene una etiqueta ni un commit identificado como **v1.5**. Por eso, 389 líneas corresponde a la última revisión anterior a la integración Bootstrap, no a una revisión v1.5 verificada. Se usa como comparación reproducible y se deja constancia de que la referencia exacta solicitada no aparece en GitHub.
+
+**Tiempo invertido**
+
+El tiempo total de implementación de cada versión no quedó registrado, así que no es posible comparar horas ni afirmar un ahorro de tiempo medido. La bitácora anterior solo contiene una estimación de **30–45 minutos para la prueba del catálogo Bootstrap**; no representa el tiempo de la migración completa.
+
+**Ventajas observadas**
+
+- La grilla Bootstrap resuelve encabezado, pie, catálogo de servicios, tarifas y reservas con clases responsive reutilizables, reduciendo CSS propio de distribución.
+- Los breakpoints `md`, `lg` y `xl` hacen explícitos los cambios de columnas; las tablas conservan sus estilos de marca y se protegen en pantallas estrechas con `table-responsive`.
+- Los controles mantienen las validaciones HTML nativas y se benefician de los estilos de formulario Bootstrap.
+
+**Desventajas observadas**
+
+- El marcado tiene más clases y queda vinculado a los breakpoints y convenciones de Bootstrap.
+- Los estilos de marca y tabla siguen requiriendo CSS propio; el CDN y sus versiones también son una dependencia que debe mantenerse.
+- Las tablas densas y la distribución de formulario requieren verificación en anchos pequeños para evitar contenido apretado o desplazamiento inesperado.
+
+**Conclusión:** con la revisión previa disponible, `styles.css` disminuyó 205 líneas (52,7 %) al trasladar la distribución responsive a Bootstrap, conservando el CSS de identidad visual y las validaciones nativas. La reducción de trabajo de maquetación es plausible por la reutilización de grilla y utilidades, pero el historial no registra el tiempo total de ambas versiones; por tanto, no se puede afirmar un ahorro de tiempo cuantificado. Para una comparación temporal concluyente se deben cronometrar futuras implementaciones con el mismo alcance.

@@ -6,146 +6,126 @@
     <title>Tarifas - Rueda Libre</title>
     <meta name="description" content="Consulta nuestras tarifas de alquiler de bicicletas en Medellín. Ofrecemos precios competitivos y opciones flexibles para que disfrutes de tu paseo por la ciudad.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-<header>
-    <a href="../index.html"><img src="../img/logo-rueda-libre.jpg" alt="Logo de Rueda Libre" width="200" height="100"></a>
+<header class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-md-between gap-3 p-3">
+    <a href="../index.html"><img class="img-fluid" src="../img/logo-rueda-libre.jpg" alt="Logo de Rueda Libre" width="200" height="100"></a>
     <nav aria-label="Navegación principal">
-        <ul id="menu">
-            <li><a href="../index.html" class="activo">Inicio</a></li>
-            <li><a href="tarifas.html" class="activo">Tarifas</a></li>
-            <li><a href="reservas.html" class="activo">Reservas</a></li>
+        <ul id="menu" class="list-unstyled d-flex flex-wrap justify-content-center gap-3 mb-0">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="tarifas.html" class="activo" aria-current="page">Tarifas</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
         </ul>
     </nav>
 </header>
 
+<main class="container py-4">
+    <h1>Tarifas de alquiler de bicicletas y recorridos guiados en Medellín</h1>
+    <section id="tarifas" class="row g-4 align-items-start my-4" aria-labelledby="tarifas-title">
+        <div class="col-12 col-lg-8">
+            <h2 id="tarifas-title">Tarifas de alquiler de bicicletas en Medellín</h2>
+            <div class="table-responsive">
+                <table>
+                    <caption class="visually-hidden">Tarifas de alquiler de bicicletas en Medellín</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Tipo de bicicleta</th>
+                            <th scope="col">1 hora</th>
+                            <th scope="col">Medio día (4 horas)</th>
+                            <th scope="col">Día completo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Urbana</th>
+                            <td>$10.000 COP</td>
+                            <td>$30.000 COP</td>
+                            <td>$50.000 COP</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Montaña</th>
+                            <td>$15.000 COP</td>
+                            <td>$45.000 COP</td>
+                            <td>$75.000 COP</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Eléctrica</th>
+                            <td>$25.000 COP</td>
+                            <td>$70.000 COP</td>
+                            <td>$110.000 COP</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <aside class="col-12 col-lg-4">
+            <p class="tarifa-nota">Todas las tarifas incluyen casco y candado. Los recorridos salen sábados y domingos a las 7:00 a. m. Qué llevar: ropa cómoda, agua, protector solar y documento de identidad.</p>
+        </aside>
+    </section>
 
-<main>
-<section id="tarifas">
-
-<h1>Tarifas de alquiler de bicicletas y recorridos guiados en Medellín</h1>
-<table>
-
- <caption><h2>Tarifas de alquiler de bicicletas en Medellín</h2></caption>
-    <thead>
-        <tr>
-            <th scope="col">Tipo de bicicleta</th>
-            <th scope="col">1 hora</th>
-            <th scope="col">Medio día (4 horas)</th>
-            <th scope="col">Día completo</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td scope="row">Urbana</td>
-            <td scope="row">$10.000 COP</td>
-            <td scope="row">$30.000 COP</td>
-            <td scope="row">$50.000 COP</td>
-        </tr>
-        <tr>
-            <td scope="row">Montaña</td>
-            <td scope="row">$15.000 COP</td>
-            <td scope="row">$45.000 COP</td>
-            <td scope="row">$75.000 COP</td>
-        </tr>
-        <tr>
-            <td scope="row">Eléctrica</td>
-            <td scope="row">$25.000 COP</td>
-            <td scope="row">$70.000 COP</td>
-            <td scope="row">$110.000 COP</td>
-        </tr>
-
-    </tbody>
-
-    
-
-</table>
-
-<aside>
-    <tfoot>
-        <tr>
-            <td colspan="5">* Todas las tarifas incluyen casco y candado. Los recorridos salen sábados y domingos a las 7:00 a. m. Qué llevar: ropa cómoda, agua, protector solar y documento de identidad.</td>
-        </tr>
-    </tfoot>  
-</aside>
-
-</section>
-
-<br>
-
-<section id="recorridos">
-<table>
-
- <caption><h2>Tarifas de recorridos guiados en Medellín</h2></caption>
-    <thead>
-        <tr>
-            <th scope="col">Recorrido</th>
-            <th scope="col">Distancia</th>
-            <th scope="col">Duración</th>
-            <th scope="col">Nivel</th>
-            <th scope="col">Precio por persona</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td scope="row">Río y Parques</td>
-            <td scope="row">12 km</td>
-            <td scope="row">2 horas</td>
-            <td scope="row">Fácil</td>
-            <td scope="row">$20.000 COP</td>
-        </tr>
-        <tr>
-            <td scope="row">Sabores de Barrio</td>
-            <td scope="row">18 km</td>
-            <td scope="row">3 horas</td>
-            <td scope="row">Medio</td>
-            <td scope="row">$60.000 COP</td>
-        </tr>
-        <tr>
-            <td scope="row">Recorrido completo de la ciudad</td>
-            <td scope="row">25 km</td>
-            <td scope="row">4 horas</td>
-            <td scope="row">Difícil</td>
-            <td scope="row">$85.000 COP</td>
-        </tr>
-
-        
-
-    </tbody> 
-
-</table>
-
-<aside>
-    <tfoot>
-        <tr>
-            <td colspan="5">* Todas las tarifas incluyen casco y candado. Los recorridos salen sábados y domingos a las 7:00 a. m. Qué llevar: ropa cómoda, agua, protector solar y documento de identidad.</td>
-        </tr>
-    </tfoot>  
-</aside>
-
-    <a href="reservas.html" class="boton">Reservar ahora</a>
-
-</section>
-
-<br>
-<a href="../index.html">Volver a la página principal</a>
+    <section id="recorridos" class="row g-4 align-items-start my-4" aria-labelledby="recorridos-title">
+        <div class="col-12 col-lg-8">
+            <h2 id="recorridos-title">Tarifas de recorridos guiados en Medellín</h2>
+            <div class="table-responsive">
+                <table>
+                    <caption class="visually-hidden">Tarifas de recorridos guiados en Medellín</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Recorrido</th>
+                            <th scope="col">Distancia</th>
+                            <th scope="col">Duración</th>
+                            <th scope="col">Nivel</th>
+                            <th scope="col">Precio por persona</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Río y Parques</th>
+                            <td>12 km</td>
+                            <td>2 horas</td>
+                            <td>Fácil</td>
+                            <td>$20.000 COP</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Sabores de Barrio</th>
+                            <td>18 km</td>
+                            <td>3 horas</td>
+                            <td>Medio</td>
+                            <td>$60.000 COP</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Recorrido completo de la ciudad</th>
+                            <td>25 km</td>
+                            <td>4 horas</td>
+                            <td>Difícil</td>
+                            <td>$85.000 COP</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <aside class="col-12 col-lg-4 d-flex flex-column align-items-start">
+            <p class="tarifa-nota">Todas las tarifas incluyen casco y candado. Los recorridos salen sábados y domingos a las 7:00 a. m. Qué llevar: ropa cómoda, agua, protector solar y documento de identidad.</p>
+            <a href="reservas.html" class="btn btn-primary">Reservar ahora</a>
+        </aside>
+    </section>
+    <a href="../index.html">Volver a la página principal</a>
 </main>
 
-<footer>
-    <div class="bloque-footer">
+<footer class="container-fluid row g-3 p-3">
+    <div class="bloque-footer col-12 col-md-6 col-xl-4">
         <h3>Rueda Libre</h3>
         <p>Alquiler de bicicletas en Medellín.</p>
     </div>
-
-    <div class="bloque-footer">
+    <div class="bloque-footer col-12 col-md-6 col-xl-4">
         <h3>Contacto</h3>
         <p><a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a></p>
     </div>
-
-    <div class="bloque-footer">
+    <div class="bloque-footer col-12 col-md-6 col-xl-4">
         <h3>Horario</h3>
         <p>Estamos disponibles para reservas los días:</p>
         <ul>
@@ -154,15 +134,6 @@
         </ul>
     </div>
 </footer>
-
-<a
-    href="https://wa.me/573000000000"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="whatsapp-fijo"
->
-    WhatsApp
-</a>
-
+<a href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer" class="whatsapp-fijo">WhatsApp</a>
 </body>
 </html>

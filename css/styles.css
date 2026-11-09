@@ -81,8 +81,21 @@ h1, h2, h3, h4, h5, h6 {
 
 #formulario {
     box-sizing: border-box;
-    width: 70%;
-    
+    min-width: 0;
+}
+
+.reserva-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+    gap: var(--espaciado-lg);
+}
+
+.informacion-reserva {
+    padding: var(--espaciado-md);
+    border: 1px solid var(--gris-asfalto);
+    border-radius: var(--espaciado-sm);
+    overflow-wrap: anywhere;
 }
 
 main {
@@ -95,8 +108,47 @@ main {
 ================================================== */
 
 .cover {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    gap: var(--espaciado-lg);
     min-height: 70vh;
-   
+}
+
+.cover img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--espaciado-sm);
+}
+
+#rutas {
+    margin-block: var(--espaciado-xl);
+}
+
+.rutas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--espaciado-lg);
+}
+
+.tarjeta-ruta {
+    min-width: 0;
+    padding: var(--espaciado-md);
+    border: 1px solid var(--gris-asfalto);
+    border-radius: var(--espaciado-sm);
+}
+
+.tarjeta-ruta img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.tarjeta-ruta h3 {
+    margin-bottom: var(--espaciado-sm);
 }
 
 /* ==================================================
@@ -213,6 +265,12 @@ label {
 input, select, textarea {
     width: 100%;
     box-sizing: border-box;
+}
+
+.fila-datos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--espaciado-md);
 }
 
 .form-data, .form-rent, .form-confirm {
@@ -335,4 +393,27 @@ footer {
     justify-content: space-evenly;
     align-items: flex-start;
     gap: var(--espaciado-md);
+}
+
+@media (max-width: 52rem) {
+    .rutas-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .reserva-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 40rem) {
+    .cover {
+        grid-template-columns: 1fr;
+        min-height: 0;
+        padding-block: var(--espaciado-xl);
+    }
+
+    .rutas-grid,
+    .fila-datos {
+        grid-template-columns: 1fr;
+    }
 }

@@ -26,20 +26,10 @@
  <main>
 
     <h1>Reserva tu bicicleta</h1>
-    <a href="mailto:hola@ruedalibre.example">Contáctanos</a>
-
-    <section id="reserva">
-        <h2>Horarios de atención</h2>
-        <p>Estamos disponibles para reservas los días:</p>
-        <ul>
-            <li>Lunes a viernes: 7:00 a 19:00</li>
-            <li>Sábados, domingos y festivos: 6:00 a 14:00</li>
-        </ul>
-    </section>
-
-    <section id="formulario">
-        <h2>Formulario para reservar</h2>
-        <form action="" method="post">
+    <div class="reserva-layout">
+        <section id="formulario">
+            <h2>Formulario para reservar</h2>
+            <form action="" method="post">
 
            <fieldset class="form-data">
             <legend>Tus datos</legend>
@@ -49,19 +39,21 @@
             <input type="text" minlength="3" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez" >
             </p>
             
-            <p>
-            <label for="identificacion">Número de identificación:</label>
-            <input type="text" placeholder="Solo números" id="identificacion" name="identificacion" required inputmode="numeric" pattern="[0-9]{6,10}" maxlength="10" title="Solo números, entre 6 y 10 dígitos">
-            </p>
+            <div class="fila-datos">
+                <p>
+                <label for="identificacion">Número de identificación:</label>
+                <input type="text" placeholder="Solo números" id="identificacion" name="identificacion" required inputmode="numeric" pattern="[0-9]{6,10}" maxlength="10" title="Solo números, entre 6 y 10 dígitos">
+                </p>
+
+                <p>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" pattern="[0-9]{10}" min="3000000000" max="3999999999" placeholder="3xx xxx xxxx" id="telefono" name="telefono" required title="Debes escribir un número de teléfono válido, ejemplo: 300 123 4567">
+                </p>
+            </div>
 
             <p>
             <label for="email">Email:</label>
             <input type="email" placeholder="example@example.com" id="email" name="email" required>
-            </p>
-
-            <p>
-            <label for="telefono">Teléfono:</label>
-            <input type="tel" pattern="[0-9]{10}" min="3000000000" max="3999999999" placeholder="3xx xxx xxxx" id="telefono" name="telefono" required title="Debes escribir un número de teléfono válido, ejemplo: 300 123 4567">
             </p>
 
            </fieldset>
@@ -124,9 +116,9 @@
             <small>Máximo 300 caracteres</small>
             </p>
 
-           </fieldset class="form-confirm">
+           </fieldset>
 
-           <fieldset>
+           <fieldset class="form-confirm">
             <legend>Confirmación</legend>
 
             <p>
@@ -139,8 +131,20 @@
             </p>
            </fieldset>
 
-        </form>
-    </section>
+            </form>
+        </section>
+
+        <aside id="reserva" class="informacion-reserva" aria-labelledby="horarios-title">
+            <h2 id="horarios-title">Información de contacto</h2>
+            <p>Escríbenos: <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a></p>
+            <h3>Horarios de atención</h3>
+            <p>Estamos disponibles para reservas los días:</p>
+            <ul>
+                <li>Lunes a viernes: 7:00 a 19:00</li>
+                <li>Sábados, domingos y festivos: 6:00 a 14:00</li>
+            </ul>
+        </aside>
+    </div>
 
  </main>
 

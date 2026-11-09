@@ -179,3 +179,13 @@ En las tres anchuras, la pagina no presento desbordamiento horizontal y las imag
 - **Comparación de distribución:** la versión propia usa 5 líneas CSS en `.flota-grid` (selector, tres declaraciones y cierre) en `css/styles.css`. La prueba usa 6 clases de grilla Bootstrap: `row` y `g-4` para filas y gutters, más `col-12`, `col-sm-6`, `col-lg-4` y `col-xl-3` en cada columna.
 - **Qué aportó Bootstrap sin esfuerzo:** columnas responsive en los cuatro tamaños, gutters, contenedores y tarjetas con estilos consistentes, usando clases predefinidas.
 - **Qué control se perdió:** la cantidad de columnas y sus cambios quedan ligados a los breakpoints de Bootstrap, y ya no se define con precisión propia el ancho mínimo de cada tarjeta, el recorte/aspecto de las imágenes ni el espacio entre columnas.
+
+09/11/2026 - Utilidades Bootstrap para beneficios y reservas
+
+- `col-md-6`: ocupa la mitad de la fila desde el breakpoint `md`.
+- `gap-4`: agrega espacio entre los elementos de un contenedor flex o grid.
+- `flex-md-row`: organiza los elementos en fila desde `md`.
+- `d-none`: oculta un elemento en todos los tamaños de pantalla.
+- `d-md-block`: muestra un elemento como bloque desde `md`; junto con `d-none`, lo mantiene oculto en celulares.
+
+Consulta: documentación oficial de Bootstrap 5.3 sobre [grilla](https://getbootstrap.com/docs/5.3/layout/grid/), [espaciado](https://getbootstrap.com/docs/5.3/utilities/spacing/), [flex](https://getbootstrap.com/docs/5.3/utilities/flex/) y [display](https://getbootstrap.com/docs/5.3/utilities/display/).

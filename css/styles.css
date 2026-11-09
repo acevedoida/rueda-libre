@@ -15,6 +15,8 @@
     --espaciado-md: 1rem;
     --espaciado-lg: 2rem;
     --espaciado-xl: 3rem;
+
+    --bs-success-rgb: 30, 122, 79;
 }
 
 * {
@@ -36,7 +38,17 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--fuente-titulos);
 }
 
-main {
+main.container a:not(.boton):not(.btn) {
+    color: var(--verde-ruta);
+}
+
+main.container a:not(.boton):not(.btn):hover,
+main.container a:not(.boton):not(.btn):focus-visible {
+    color: var(--naranja-pedal);
+}
+
+/* Distribución de main conservada para tarifas y reservas. */
+main:not(.container) {
     width: calc(100% - 2rem);
     max-width: 60rem;
     margin-inline: auto;
@@ -85,54 +97,14 @@ nav ul,
     color: var(--naranja-pedal);
 }
 
-/* ==================================================
-   3. PORTADA Y RUTAS
-================================================== */
-.cover {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: var(--espaciado-lg);
-    padding-block: var(--espaciado-lg);
-}
-
-.cover img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: var(--espaciado-sm);
-}
-
-#rutas {
-    margin-block: var(--espaciado-xl);
-}
-
-.rutas-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: var(--espaciado-lg);
-}
-
-.tarjeta-ruta {
-    min-width: 0;
-    padding: var(--espaciado-md);
-    border: 1px solid var(--gris-asfalto);
-    border-radius: var(--espaciado-sm);
-}
-
-.tarjeta-ruta img {
-    display: block;
-    width: 100%;
+.ruta-imagen,
+.flota-imagen {
     aspect-ratio: 16 / 10;
     object-fit: cover;
-    border-radius: 4px;
-}
-
-.tarjeta-ruta h3 {
-    margin-bottom: var(--espaciado-sm);
 }
 
 /* ==================================================
-   4. SERVICIOS Y FLOTA
+   3. SERVICIOS Y MARCA
 ================================================== */
 #services {
     display: grid;
@@ -151,39 +123,26 @@ nav ul,
     height: auto;
 }
 
-#flota {
-    margin-block: var(--espaciado-xl);
+.text-brand {
+    color: var(--azul-noche);
 }
 
-.flota-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 17.5rem), 1fr));
-    gap: var(--espaciado-lg);
+.bg-brand-accent {
+    background-color: var(--naranja-pedal);
+    color: var(--azul-noche);
 }
 
-.tarjeta-flota {
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    padding: var(--espaciado-md);
-    border: 1px solid var(--gris-asfalto);
-    border-radius: var(--espaciado-sm);
-}
-
-.tarjeta-flota img {
-    width: 100%;
-    aspect-ratio: 16 / 10;
-    object-fit: cover;
-    border-radius: 4px;
-}
-
-.tarjeta-flota h3 {
-    margin-bottom: 0;
-}
-
-.reserva-flota {
-    align-self: flex-start;
-    margin-top: auto;
+.btn-primary {
+    --bs-btn-color: var(--crema);
+    --bs-btn-bg: var(--verde-ruta);
+    --bs-btn-border-color: var(--verde-ruta);
+    --bs-btn-hover-color: var(--azul-noche);
+    --bs-btn-hover-bg: var(--naranja-pedal);
+    --bs-btn-hover-border-color: var(--naranja-pedal);
+    --bs-btn-focus-shadow-rgb: 30, 122, 79;
+    --bs-btn-active-color: var(--azul-noche);
+    --bs-btn-active-bg: var(--naranja-pedal);
+    --bs-btn-active-border-color: var(--naranja-pedal);
 }
 
 .tarjeta-servicio {
@@ -204,7 +163,7 @@ nav ul,
 }
 
 /* ==================================================
-   5. TARIFAS
+   4. TARIFAS (solo paginas/tarifas.html)
 ================================================== */
 table {
     width: 100%;
@@ -245,7 +204,7 @@ td {
 }
 
 /* ==================================================
-   6. RESERVAS Y FORMULARIO
+   5. RESERVAS Y FORMULARIO (solo paginas/reservas.html)
 ================================================== */
 .reserva-layout {
     display: grid;
@@ -335,7 +294,7 @@ button:focus-visible {
 }
 
 /* ==================================================
-   7. PIE Y ELEMENTOS DE ACCIÓN
+   6. PIE Y ELEMENTOS DE ACCIÓN
 ================================================== */
 footer {
     display: grid;
@@ -385,7 +344,7 @@ footer {
 }
 
 /* ==================================================
-   8. TABLET
+   7. TABLET
 ================================================== */
 @media (min-width: 768px) {
     header {
@@ -400,16 +359,6 @@ footer {
 
     #menu {
         flex-wrap: nowrap;
-    }
-
-    .cover {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        align-items: center;
-        gap: var(--espaciado-lg);
-    }
-
-    .rutas-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .reserva-layout {
@@ -437,20 +386,12 @@ footer {
 }
 
 /* ==================================================
-   9. ESCRITORIO
+   8. ESCRITORIO
 ================================================== */
 @media (min-width: 1200px) {
-    main {
+    main:not(.container) {
         width: calc(100% - 3rem);
         max-width: 75rem;
-    }
-
-    .cover {
-        gap: var(--espaciado-xl);
-    }
-
-    .rutas-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     footer {

@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -26,36 +27,50 @@
 
 </header>
 
- <main>
-    <section class="cover" aria-labelledby="cover-title">
-        <div class="cover-content">
+ <main class="container py-4">
+    <section class="row align-items-center g-4 py-4" aria-labelledby="cover-title">
+        <div class="col-12 col-md-6">
             <h1 id="cover-title">Rueda Libre</h1>
             <p>Bienvenido a Rueda Libre, tu opción confiable para alquilar bicicletas en Medellín. Explora la ciudad de manera ecológica y divertida con nuestras bicicletas de alta calidad.</p>
         </div>
-        <img src="img/portada-rueda.jpg" alt="Bicicletas en Medellín" width="600" height="400">
+        <div class="col-12 col-md-6">
+            <img class="img-fluid rounded-3" src="img/portada-rueda.jpg" alt="Bicicletas en Medellín" width="600" height="400">
+        </div>
     </section>
 
-    <section id="rutas" aria-labelledby="rutas-title">
-        <h2 id="rutas-title">Nuestras rutas</h2>
-        <div class="rutas-grid">
-            <article class="tarjeta-ruta">
-                <img src="img/rio-parques.jpg" alt="Paisaje del recorrido Río y Parques">
-                <h3>Río y Parques</h3>
-                <p>12 km · 2 horas</p>
-                <p><strong>Nivel:</strong> Fácil</p>
-            </article>
-            <article class="tarjeta-ruta">
-                <img src="img/barrio.jpg" alt="Paisaje urbano del recorrido Sabores de Barrio">
-                <h3>Sabores de Barrio</h3>
-                <p>18 km · 3 horas</p>
-                <p><strong>Nivel:</strong> Medio</p>
-            </article>
-            <article class="tarjeta-ruta">
-                <img src="img/ciudad.jpg" alt="Vista de la ciudad en el recorrido completo">
-                <h3>Recorrido completo de la ciudad</h3>
-                <p>25 km · 4 horas</p>
-                <p><strong>Nivel:</strong> Difícil</p>
-            </article>
+    <section id="rutas" class="my-5" aria-labelledby="rutas-title">
+        <h2 id="rutas-title" class="mb-4">Nuestras rutas</h2>
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card h-100">
+                    <img class="card-img-top ruta-imagen" src="img/rio-parques.jpg" alt="Paisaje del recorrido Río y Parques">
+                    <div class="card-body">
+                        <h3 class="h5 card-title">Río y Parques</h3>
+                        <p class="card-text">12 km · 2 horas</p>
+                        <p class="card-text"><strong>Nivel:</strong> Fácil</p>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card h-100">
+                    <img class="card-img-top ruta-imagen" src="img/barrio.jpg" alt="Paisaje urbano del recorrido Sabores de Barrio">
+                    <div class="card-body">
+                        <h3 class="h5 card-title">Sabores de Barrio</h3>
+                        <p class="card-text">18 km · 3 horas</p>
+                        <p class="card-text"><strong>Nivel:</strong> Medio</p>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card h-100">
+                    <img class="card-img-top ruta-imagen" src="img/ciudad.jpg" alt="Vista de la ciudad en el recorrido completo">
+                    <div class="card-body">
+                        <h3 class="h5 card-title">Recorrido completo de la ciudad</h3>
+                        <p class="card-text">25 km · 4 horas</p>
+                        <p class="card-text"><strong>Nivel:</strong> Difícil</p>
+                    </div>
+                </article>
+            </div>
         </div>
     </section>
 
@@ -66,57 +81,119 @@
     </section>
 
     <section id="flota" aria-labelledby="flota-title">
-        <h2 id="flota-title">Nuestra flota</h2>
-        <div class="flota-grid">
-            <article class="tarjeta-flota">
-                <img src="img/urbana-clasica.png" alt="Ilustración de bicicleta urbana clásica azul">
-                <h3>Urbana Clásica</h3>
-                <p>Cómoda y liviana para las ciclorrutas.</p>
-                <p class="precio-flota">Precio por hora: <strong>$10.000</strong></p>
-                <a class="boton reserva-flota" href="paginas/reservas.html">Reservar</a>
-            </article>
-            <article class="tarjeta-flota">
-                <img src="img/urbana-plegable.jpg" alt="Ilustración de bicicleta urbana plegable naranja">
-                <h3>Urbana Plegable</h3>
-                <p>Se dobla en segundos; ideal para combinar con el metro.</p>
-                <p class="precio-flota">Precio por hora: <strong>$12.000</strong></p>
-                <a class="boton reserva-flota" href="paginas/reservas.html">Reservar</a>
-            </article>
-            <article class="tarjeta-flota">
-                <img src="img/montana-trail.jpg" alt="Ilustración de bicicleta de montaña verde con suspensión">
-                <h3>Montaña Trail</h3>
-                <p>Suspensión delantera y 21 cambios para las subidas.</p>
-                <p class="precio-flota">Precio por hora: <strong>$15.000</strong></p>
-                <a class="boton reserva-flota" href="paginas/reservas.html">Reservar</a>
-            </article>
-            <article class="tarjeta-flota">
-                <img src="img/gravel-aventura.jpg" alt="Ilustración de bicicleta gravel morada con manubrio curvo">
-                <h3>Gravel Aventura</h3>
-                <p>Para rutas mixtas de asfalto y destapado.</p>
-                <p class="precio-flota">Precio por hora: <strong>$18.000</strong></p>
-                <a class="boton reserva-flota" href="paginas/reservas.html">Reservar</a>
-            </article>
-            <article class="tarjeta-flota">
-                <img src="img/bicicleta-electrica-rueda.jpg" alt="Ilustración de bicicleta eléctrica urbana negra con batería">
-                <h3>Eléctrica Urbana</h3>
-                <p>Asistencia eléctrica con 45 km de autonomía.</p>
-                <p class="precio-flota">Precio por hora: <strong>$25.000</strong></p>
-                <a class="boton reserva-flota" href="paginas/reservas.html">Reservar</a>
-            </article>
-            <article class="tarjeta-flota">
-                <img src="img/infantil.jpg" alt="Ilustración de bicicleta infantil amarilla">
-                <h3>Infantil</h3>
-                <p>Para niños de 6 a 10 años.</p>
-                <p class="precio-flota">Precio por hora: <strong>$8.000</strong></p>
-                <a class="boton reserva-flota" href="paginas/reservas.html">Reservar</a>
-            </article>
-            <article class="tarjeta-flota">
-                <img src="img/tandem.jpg" alt="Ilustración de bicicleta tándem roja con dos asientos">
-                <h3>Tándem</h3>
-                <p>Para dos personas; perfecta para pasear en pareja.</p>
-                <p class="precio-flota">Precio por hora: <strong>$20.000</strong></p>
-                <a class="boton reserva-flota" href="paginas/reservas.html">Reservar</a>
-            </article>
+        <h2 id="flota-title" class="mb-4">Nuestra flota</h2>
+        <div class="row g-4">
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <article class="card h-100">
+                    <img class="card-img-top flota-imagen" src="img/urbana-clasica.png" alt="Ilustración de bicicleta urbana clásica azul">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="h5 card-title">Urbana Clásica</h3>
+                        <p class="card-text">Cómoda y liviana para las ciclorrutas.</p>
+                        <p class="card-text">Precio por hora: <strong>$10.000</strong></p>
+                        <a class="btn btn-primary mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <article class="card h-100">
+                    <img class="card-img-top flota-imagen" src="img/urbana-plegable.jpg" alt="Ilustración de bicicleta urbana plegable naranja">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="h5 card-title">Urbana Plegable</h3>
+                        <p class="card-text">Se dobla en segundos; ideal para combinar con el metro.</p>
+                        <p class="card-text">Precio por hora: <strong>$12.000</strong></p>
+                        <a class="btn btn-primary mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <article class="card h-100">
+                    <img class="card-img-top flota-imagen" src="img/montana-trail.jpg" alt="Ilustración de bicicleta de montaña verde con suspensión">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="h5 card-title">Montaña Trail</h3>
+                        <p class="card-text">Suspensión delantera y 21 cambios para las subidas.</p>
+                        <p class="card-text">Precio por hora: <strong>$15.000</strong></p>
+                        <a class="btn btn-primary mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <article class="card h-100">
+                    <img class="card-img-top flota-imagen" src="img/gravel-aventura.jpg" alt="Ilustración de bicicleta gravel morada con manubrio curvo">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="h5 card-title">Gravel Aventura</h3>
+                        <p class="card-text">Para rutas mixtas de asfalto y destapado.</p>
+                        <p class="card-text">Precio por hora: <strong>$18.000</strong></p>
+                        <a class="btn btn-primary mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <article class="card h-100">
+                    <img class="card-img-top flota-imagen" src="img/bicicleta-electrica-rueda.jpg" alt="Ilustración de bicicleta eléctrica urbana negra con batería">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="h5 card-title">Eléctrica Urbana</h3>
+                        <p class="card-text">Asistencia eléctrica con 45 km de autonomía.</p>
+                        <p class="card-text">Precio por hora: <strong>$25.000</strong></p>
+                        <a class="btn btn-primary mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <article class="card h-100">
+                    <img class="card-img-top flota-imagen" src="img/infantil.jpg" alt="Ilustración de bicicleta infantil amarilla">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="h5 card-title">Infantil</h3>
+                        <p class="card-text">Para niños de 6 a 10 años.</p>
+                        <p class="card-text">Precio por hora: <strong>$8.000</strong></p>
+                        <a class="btn btn-primary mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <article class="card h-100">
+                    <img class="card-img-top flota-imagen" src="img/tandem.jpg" alt="Ilustración de bicicleta tándem roja con dos asientos">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="h5 card-title">Tándem</h3>
+                        <p class="card-text">Para dos personas; perfecta para pasear en pareja.</p>
+                        <p class="card-text">Precio por hora: <strong>$20.000</strong></p>
+                        <a class="btn btn-primary mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5" aria-labelledby="benefits-title">
+        <h2 id="benefits-title" class="mb-4 text-center text-success">¿Por qué Rueda Libre?</h2>
+        <div class="row g-4">
+            <div class="col-12 col-md-6">
+                <article class="h-100 border-start border-success border-4 ps-3">
+                    <h3 class="h5 text-brand">Bicicletas revisadas en cada alquiler</h3>
+                    <p class="text-body-secondary">Revisamos cada bicicleta antes de que empieces tu recorrido.</p>
+                    <span class="d-inline-block px-2 py-1 bg-brand-accent">100% revisadas</span>
+                </article>
+            </div>
+            <div class="col-12 col-md-6">
+                <article class="h-100 border-start border-success border-4 ps-3">
+                    <h3 class="h5 text-brand">Casco y candado incluidos</h3>
+                    <p class="text-body-secondary">Lleva lo esencial para rodar con seguridad y tranquilidad.</p>
+                    <span class="d-inline-block px-2 py-1 bg-brand-accent">2 accesorios incluidos</span>
+                </article>
+            </div>
+            <div class="col-12 col-md-6">
+                <article class="h-100 border-start border-success border-4 ps-3">
+                    <h3 class="h5 text-brand">Guías certificados</h3>
+                    <p class="text-body-secondary">Acompañamiento experto para disfrutar cada ruta.</p>
+                    <span class="d-inline-block px-2 py-1 bg-brand-accent">Guías expertos</span>
+                </article>
+            </div>
+            <div class="col-12 col-md-6">
+                <article class="h-100 border-start border-success border-4 ps-3">
+                    <h3 class="h5 text-brand">Puntos de devolución en tres sedes</h3>
+                    <p class="text-body-secondary">Finaliza tu recorrido en el punto que más te convenga.</p>
+                    <span class="d-inline-block px-2 py-1 bg-brand-accent">3 sedes</span>
+                </article>
+            </div>
         </div>
     </section>
 
@@ -228,6 +305,7 @@
     WhatsApp
 </a>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -180,6 +180,7 @@ En las tres anchuras, la pagina no presento desbordamiento horizontal y las imag
 - **Qué aportó Bootstrap sin esfuerzo:** columnas responsive en los cuatro tamaños, gutters, contenedores y tarjetas con estilos consistentes, usando clases predefinidas.
 - **Qué control se perdió:** la cantidad de columnas y sus cambios quedan ligados a los breakpoints de Bootstrap, y ya no se define con precisión propia el ancho mínimo de cada tarjeta, el recorte/aspecto de las imágenes ni el espacio entre columnas.
 
+///////////////////////////
 09/11/2026 - Utilidades Bootstrap para beneficios y reservas
 
 - `col-md-6`: ocupa la mitad de la fila desde el breakpoint `md`.
@@ -189,3 +190,14 @@ En las tres anchuras, la pagina no presento desbordamiento horizontal y las imag
 - `d-md-block`: muestra un elemento como bloque desde `md`; junto con `d-none`, lo mantiene oculto en celulares.
 
 Consulta: documentación oficial de Bootstrap 5.3 sobre [grilla](https://getbootstrap.com/docs/5.3/layout/grid/), [espaciado](https://getbootstrap.com/docs/5.3/utilities/spacing/), [flex](https://getbootstrap.com/docs/5.3/utilities/flex/) y [display](https://getbootstrap.com/docs/5.3/utilities/display/).
+
+////////////////////////////////
+09/11/2026 - Inicio con Bootstrap 5.3.8: conflictos y soluciones
+
+Se revisaron los estilos calculados de Inicio en el navegador con Bootstrap y `styles.css` cargados en ese orden:
+
+1. **Color de los enlaces:** Bootstrap aplicaba azul `rgb(13, 110, 253)` a los enlaces normales, aunque el texto del sitio usa azul noche. Se agregó una regla para los enlaces de `main.container` (excepto botones) en `styles.css`, después de Bootstrap, para usar verde ruta; `:hover` y `:focus-visible` usan naranja pedal. Los botones conservan el color de marca definido por sus propias clases.
+2. **Márgenes de títulos y secciones:** el margen inferior de un `h2` de Bootstrap era `0.5rem`; la utilidad `.mb-4` lo reemplaza por `1.5rem` (24 px), que se comprobó en la sección de rutas. Se usaron `my-5` y `mb-4` para definir explícitamente el ritmo vertical y se retiró la distribución CSS antigua de Inicio.
+3. **Tamaño de títulos de tarjetas:** los `h3` generales escalan con el viewport en Bootstrap; los títulos de tarjeta usan la utilidad `.h5` y quedan en 20 px, con jerarquía menor que los encabezados de sección. Se conserva la fuente Montserrat mediante la regla de marca para encabezados.
+
+Verificación responsive con emulación de viewport a 360 px, 768 px y 1280 px: portada apilada en móvil y en dos columnas desde `md`; rutas en una, dos y tres columnas según el breakpoint; flota en una, dos y cuatro columnas; beneficios en una y dos columnas. No hubo desbordamiento horizontal ni imágenes rotas. Se conservaron Open Sans, Montserrat y los colores de marca.

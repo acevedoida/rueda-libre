@@ -120,6 +120,40 @@ main {
     height: auto;
 }
 
+#flota {
+    margin-block: var(--espaciado-xl);
+}
+
+.flota-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 17.5rem), 1fr));
+    gap: var(--espaciado-lg);
+}
+
+.tarjeta-flota {
+    display: flex;
+    flex-direction: column;
+    padding: var(--espaciado-md);
+    border: 1px solid var(--gris-asfalto);
+    border-radius: var(--espaciado-sm);
+}
+
+.tarjeta-flota img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.tarjeta-flota h3 {
+    margin-bottom: 0;
+}
+
+.reserva-flota {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
 #recorridos table tbody thead {
     width: 100%;
     border-collapse: collapse;
@@ -276,4 +310,29 @@ fieldset p:has(#terminos) label {
 
 .whatsapp-fijo:hover {
     background-color: #1ea952;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--espaciado-md);
+}
+
+#menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espaciado-md);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: var(--espaciado-md);
 }

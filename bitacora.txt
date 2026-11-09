@@ -171,3 +171,11 @@ Pruebas realizadas con la emulacion de dispositivo a 360 px, 768 px y 1280 px.
 - A 360 px, el encabezado "Recorrido" de la tabla de recorridos se partia dentro de la palabra. Se redujeron el relleno y el tamano de letra de las tablas en movil y se limito el ajuste forzado de palabras; las tablas caben sin desplazamiento lateral.
 
 En las tres anchuras, la pagina no presento desbordamiento horizontal y las imagenes quedaron dentro del ancho disponible.
+
+/////////////////////////////
+09/11/2026 - Prueba de catálogo con Bootstrap 5.3
+
+- **Tiempo invertido:** estimación de 30–45 minutos; no se cronometró durante la implementación.
+- **Comparación de distribución:** la versión propia usa 5 líneas CSS en `.flota-grid` (selector, tres declaraciones y cierre) en `css/styles.css`. La prueba usa 6 clases de grilla Bootstrap: `row` y `g-4` para filas y gutters, más `col-12`, `col-sm-6`, `col-lg-4` y `col-xl-3` en cada columna.
+- **Qué aportó Bootstrap sin esfuerzo:** columnas responsive en los cuatro tamaños, gutters, contenedores y tarjetas con estilos consistentes, usando clases predefinidas.
+- **Qué control se perdió:** la cantidad de columnas y sus cambios quedan ligados a los breakpoints de Bootstrap, y ya no se define con precisión propia el ancho mínimo de cada tarjeta, el recorte/aspecto de las imágenes ni el espacio entre columnas.

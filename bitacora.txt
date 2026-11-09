@@ -234,3 +234,13 @@ El tiempo total de implementación de cada versión no quedó registrado, así q
 - Las tablas densas y la distribución de formulario requieren verificación en anchos pequeños para evitar contenido apretado o desplazamiento inesperado.
 
 **Conclusión:** con la revisión previa disponible, `styles.css` disminuyó 205 líneas (52,7 %) al trasladar la distribución responsive a Bootstrap, conservando el CSS de identidad visual y las validaciones nativas. La reducción de trabajo de maquetación es plausible por la reutilización de grilla y utilidades, pero el historial no registra el tiempo total de ambas versiones; por tanto, no se puede afirmar un ahorro de tiempo cuantificado. Para una comparación temporal concluyente se deben cronometrar futuras implementaciones con el mismo alcance.
+
+NOTA FINAL - SEMANA 2, RETO 2
+
+Hice uso de la IA debido a la falta de tiempo y a mi limitado conocimiento sobre CSS y Bootstrap. Aun así, he procurado comprender los conceptos y términos mencionados tanto por la IA como en las guías proporcionadas.
+
+Además, considero que necesito practicar mucho más estos temas para fortalecer mis conocimientos. El tiempo disponible no ha sido suficiente para alcanzar el ritmo de aprendizaje y avance esperado dentro de la academia.
+
+Para finalizar, como dijo nuestro TL: "No sé cómo harán, pero lo que espero son resultados." Por esta razón, durante el uso de la IA supervisé cuidadosamente cada cambio propuesto y verifiqué su implementación antes de aplicarlo.
+
+Espero que el trabajo realizado sea de su agrado.

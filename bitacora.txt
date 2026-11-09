@@ -160,3 +160,14 @@ Las siete tarjetas se mantuvieron visibles y el enlace «Reservar» quedó aline
 - **Fila del formulario:** Grid de dos columnas para alinear identificación y teléfono; cambia a una columna en pantallas estrechas.
 - **Encabezado:** Flexbox para alinear el logo y la navegación, distribuir el espacio y permitir que los elementos se ajusten con `flex-wrap`.
 - **Pie:** Flexbox para distribuir sus bloques de información en fila y permitir que se reorganicen cuando falta espacio.
+
+/////////////////////////////
+08/11/2026 - Diseno mobile-first y pruebas en DevTools
+
+Pruebas realizadas con la emulacion de dispositivo a 360 px, 768 px y 1280 px.
+
+- A 768 px y 1280 px, los enlaces del menu se apilaban verticalmente aunque habia espacio horizontal. Se evito que la navegacion se encoja y se desactivo el ajuste de los enlaces desde 768 px.
+- A 768 px, la portada dejaba demasiado espacio vertical alrededor del texto y la imagen por una altura minima de 60 vh. Se elimino esa altura minima y se conserva la alineacion centrada de sus dos columnas.
+- A 360 px, el encabezado "Recorrido" de la tabla de recorridos se partia dentro de la palabra. Se redujeron el relleno y el tamano de letra de las tablas en movil y se limito el ajuste forzado de palabras; las tablas caben sin desplazamiento lateral.
+
+En las tres anchuras, la pagina no presento desbordamiento horizontal y las imagenes quedaron dentro del ancho disponible.
